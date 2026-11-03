@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 7.5vh;
+    position: fixed;
+    background-color: hsl(211, 40%, 31%);
+    opacity: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 1.5vw;
+    z-index: 1;
+}
+.Menu{
+    width: 65%;
+    display: flex;
+    justify-content: left;
+    list-style: none;
+}
+.Menu li{
+    margin-left: 2vw;
+}
+.Menu li a{
+    font-size: 2vh;
+    color: white;
+    text-decoration: none;
+}
+.Menu li a:hover{
+    color: black;
+    background-color: white;
+    transition: 0.5s ease;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+main::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(0, 0, 22, 0.8), rgba(0, 0, 22, 0.8));
+    background-position: center;
+    z-index: -1;
+}
+main video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.name{
+    margin-top: 12vh;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 800;
+    flex: 1 1 auto;
+}
+.description{
+    font-size: 1.6rem;
+    padding: 5rem 15rem;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.picture img{
+    height: 42vh;
+    width: 22vw;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+@media(min-aspect-ratio: 16/9){
+    main video{
+        width: 100%;
+        height: auto;
+    }
+    .profile{
+        justify-content: center;
+        align-items: center;
+    }
+    .name{
+        width: 100%;
+        height: auto;
+    }
+    .description{
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+    }
+    .picture{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(min-aspect-ratio: 3/2){
+    main video{
+        width: 100%;
+        height: auto;
+    }
+    .profile{
+        justify-content: center;
+        align-items: center;
+    }
+    .name{
+        width: 100%;
+        height: auto;
+    }
+    .description{
+        font-size: 2rem;
+        width: 100%;
+        height: auto;
+    }
+    .picture{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-width: 2000px){
+    .profile{
+        justify-content: center;
+        align-items: center;
+    }
+    .name{
+        font-size: 2rem;
+        margin-bottom: -4rem;
+    }
+    .description{
+        font-size: 2rem;
+        display: flex;
+        padding: 5rem 7rem;
+    }
+    .picture img{
+        height: 26.4rem;
+        width: 13.2rem;
+        width: auto;
+    }
+}
+
+.scrollable-content::-webkit-scrollbar{
+    display: none;
+}
